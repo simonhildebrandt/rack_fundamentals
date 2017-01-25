@@ -2,8 +2,15 @@ require 'rack'
 
 #run Proc.new { |env| ['200', {'Content-Type' => 'text/html'}, ['get rack\'d']] }
 
-#run lambda { |env| ['200', {'Content-Type' => 'text/html'}, ['Simply Rack']] }
+run lambda { |env| ['200', {'Content-Type' => 'text/html'}, ['Simply Rack']] }
 
+# module Thing
+#   def self.call(env)
+#     ['200', {'Content-Type' => 'text/html'}, ['Modular Rack']]
+#   end
+# end
+#
+# run Thing
 
 # class Greeter
 #   def initialize(options={})
@@ -22,4 +29,6 @@ require 'rack'
 # run Greeter.new
 #run Greeter.new(greeting: 'Wassup')
 
-use Rack::Static, urls: ['/media'], root: 'public', index: 'index.html'
+# use Rack::Static, urls: ['/media'], root: 'public', index: 'index.html'
+#
+# run lambda { |env| ['200', {'Content-Type' => 'text/html'}, ['Static']] }
