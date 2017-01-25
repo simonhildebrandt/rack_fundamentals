@@ -32,3 +32,5 @@ run lambda { |env| ['200', {'Content-Type' => 'text/html'}, ['Simply Rack']] }
 # use Rack::Static, urls: ['/media'], root: 'public', index: 'index.html'
 #
 # run lambda { |env| ['200', {'Content-Type' => 'text/html'}, ['Static']] }
+
+# Rack::Cascade
