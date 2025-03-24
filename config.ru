@@ -1,8 +1,12 @@
 require 'rack'
 
-#run Proc.new { |env| ['200', {'Content-Type' => 'text/html'}, ['get rack\'d']] }
+run do |env|
+  [200, {}, ["Hello World"]]
+end
 
-run lambda { |env| ['200', {'Content-Type' => 'text/html'}, ['Simply Rack']] }
+# run Proc.new { |env| ['200', {'Content-Type' => 'text/html'}, ['get rack\'d']] }
+
+# run lambda { |env| ['200', {'Content-Type' => 'text/html'}, ['Simply Rack']] }
 
 # module Thing
 #   def self.call(env)
@@ -27,7 +31,7 @@ run lambda { |env| ['200', {'Content-Type' => 'text/html'}, ['Simply Rack']] }
 # end
 #
 # run Greeter.new
-#run Greeter.new(greeting: 'Wassup')
+# run Greeter.new(greeting: 'Wassup')
 
 # use Rack::Static, urls: ['/media'], root: 'public', index: 'index.html'
 #
